@@ -7,15 +7,15 @@
     </div>
     <div class="container">
       <div cdkDropList class="example-list" #secItem (cdkDropListDropped)="drop($event)">
-        <div class="example-box" *ngFor="let movie of germanList" cdkDrag>
+        <div class="example-box" *ngFor="let item of germanList" cdkDrag>
           <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
-          {{movie.sentence}}
+          {{item.sentence}}
         </div>
       </div>
     
       <div class="example-list">
-        <div class="example-box" *ngFor="let movie of translationList">
-          {{movie.translation}}
+        <div class="example-box" *ngFor="let item of translationList">
+          {{item.translation}}
         </div>
       </div>
     
