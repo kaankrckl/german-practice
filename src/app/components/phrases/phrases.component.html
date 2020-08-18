@@ -1,0 +1,28 @@
+<div class="main">
+    <div class="options">
+      <ul>
+        <li>Phrases</li>
+        <li>Vocabulary</li>
+      </ul>
+    </div>
+    <div class="container">
+      <div cdkDropList class="example-list" #secItem (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let movie of germanList" cdkDrag>
+          <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+          {{movie.sentence}}
+        </div>
+      </div>
+    
+      <div class="example-list">
+        <div class="example-box" *ngFor="let movie of translationList">
+          {{movie.translation}}
+        </div>
+      </div>
+    
+    </div>
+    
+    <div class="check">
+      <button (click)="check()" > Check </button>
+      <button (click)="next()"> Next </button>
+    </div>
+  </div>
